@@ -1,0 +1,114 @@
+/* General container styling */
+.contactContainer {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Content styling */
+.contactContent {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Wrapper for contact details and map */
+.contactInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+/* Map styling: aligns to the left */
+.mapContainer {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+}
+
+/* Contact details styling: aligns to the right */
+.contactDetails {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color:#2596BE;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #03607E;
+    line-height: 1.6;
+}
+
+/* Image styling */
+.contactImage {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact details styling */
+.contactDetails {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px; 
+    padding-top: 70px;
+    
+}
+
+.contactItem {
+    text-align: center;
+    margin: 10px;
+}
+
+.contactIcon {
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.contactItem p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+    font-family:'Fauna One', serif;
+}
+
+.contactItem a {
+    color: #0073e6;
+    text-decoration: none;
+    font-family:'Fauna One', serif;
+}
+
+.contactItem a:hover {
+    text-decoration: underline;
+}
+
+/* Map Styling */
+.mapContainer {
+    margin-top: 30px;
+}
+
+.map {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactImageIcon {
+    width: 30px;  
+    height: 30px;
+    margin-bottom: 10px;
+}
+

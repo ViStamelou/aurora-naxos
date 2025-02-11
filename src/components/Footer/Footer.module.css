@@ -1,0 +1,98 @@
+.footer {
+    position: relative;
+    background: #E7C9AF;
+    color: #04384B;
+    text-align: center;
+    padding: 100px 20px 40px;
+    overflow: hidden;
+  }
+  
+  /* Positioning the wave at the top */
+  .waveContainer {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+  }
+  
+  .wave {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .footerContent {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footerSections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  
+  .footerColumn {
+    text-align: left;
+    max-width: 300px;
+  }
+  
+  .footerColumn h3 {
+    color: #04384B; 
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-family:'Fauna One', serif;
+    font-weight:900;
+  }
+
+  .footerColumn p, .footerColumn a {
+    color: #04384B;
+    font-family: 'Fauna One', serif;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .logoSection {
+    margin-top: 50px; /* Adjust value as needed */
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .socialIcons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .socialIcons a:hover {
+    color: #04384B;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.7;
+    margin-top: 40px;
+    color: #04384B;
+  }
+  
+
+  
+  
+  
+  
+  
+
+  
