@@ -1,94 +1,128 @@
 .footer {
-    position: relative;
-    background: #E7C9AF;
-    color: #04384B;
-    text-align: center;
-    padding: 100px 20px 40px;
-    overflow: hidden;
-  }
-  
-  /* Positioning the wave at the top */
-  .waveContainer {
-    position: absolute;
-    top: -80px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    line-height: 0;
-  }
-  
-  .wave {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .footerContent {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .footerSections {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 5px;
-  }
-  
-  .footerColumn {
-    text-align: left;
-    max-width: 300px;
-  }
-  
-  .footerColumn h3 {
-    color: #04384B; 
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  strong {
-    font-family:'Fauna One', serif;
-    font-weight:900;
+  position: relative;
+  background: #E7C9AF;
+  color: #04384B;
+  padding: 100px 20px 40px; /* Increased padding */
+  min-height: 450px; /* Set a minimum height for the footer */
+  overflow: hidden;
+}
+
+.waveContainer {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+.footerContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 80px;
+  padding-top: 150px; 
+}
+
+.logoSection {
+  flex: 0 0 200px;
+}
+
+.logoImage {
+  max-width: 180px;
+}
+
+.infoSections {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.footerColumn {
+  text-align: left;
+  min-width: 200px;
+}
+
+.footerStrong, .footerAddress, .footerEmail, .footerTel, .footerLink {
+  font-family: 'Fauna One', serif;
+  font-size: 0.9rem;
+  color: #2C3E50;
+}
+
+.footerTitle {
+  color: #04384B;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-family: 'Cinzel', 'serif';
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center; /* Center the icons */
+}
+
+.socialIconLink {
+  color: #04384B;
+  font-size: 24px;
+  transition: color 0.3s; /* Change to color transition */
+}
+
+.socialIconLink:hover {
+  color: #2596BE; /* Change color on hover */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  opacity: 0.7;
+  margin-top: 40px;
+  color: #04384B;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 80px 20px 30px; /* Adjusted padding for smaller screens */
+    min-height: 300px; /* Adjusted height for smaller screens */
   }
 
-  .footerColumn p, .footerColumn a {
-    color: #04384B;
-    font-family: 'Fauna One', serif;
-    font-weight: 900;
-    text-decoration: none;
-    font-size: 14px;
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .logoSection {
-    margin-top: 50px; /* Adjust value as needed */
+    flex: 0 0 auto;
+    margin-bottom: 30px;
   }
-  
-  .socialIcons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .socialIcons a {
-    color: white;
-    font-size: 24px;
-    transition: color 0.3s;
-  }
-  
-  .socialIcons a:hover {
-    color: #04384B;
-  }
-  
-  .copyright {
-    font-size: 14px;
-    font-weight: bold;
-    opacity: 0.7;
-    margin-top: 40px;
-    color: #04384B;
-  }
-  
 
+  .infoSections {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footerColumn {
+    text-align: center;
+  }
+}
   
   
   

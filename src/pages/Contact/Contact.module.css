@@ -1,114 +1,324 @@
-/* General container styling */
+.contactPage {
+    background-color: #f5ffff; /* Light blue background */
+}
+
+/* Ensure no margin on the body */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Contact Container */
 .contactContainer {
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    min-height: 100vh;
+    font-family: 'Cinzel', 'serif';
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-/* Content styling */
-.contactContent {
-    margin: 0 auto;
-    padding: 30px;
+/* Image banner */
+.imageBanner {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Wrapper for contact details and map */
-.contactInfoWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    gap: 20px;
-}
-
-/* Map styling: aligns to the left */
-.mapContainer {
-    flex: 1;
-    min-width: 300px;
-    max-width: 50%;
-}
-
-/* Contact details styling: aligns to the right */
-.contactDetails {
-    flex: 1;
-    min-width: 300px;
-    max-width: 50%;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color:#2596BE;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #03607E;
-    line-height: 1.6;
-}
-
-/* Image styling */
 .contactImage {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 60%;
+    display: block;
 }
 
-/* Contact details styling */
-.contactDetails {
+/* Dark overlay on the image */
+.imageBanner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+}
+
+/* Move "Contact Us" to the left */
+.mainTitle {
+    position: absolute;
+    top: 50%;
+    left: 10%; /* Adjusted to left side */
+    transform: translateY(-50%);
+    z-index: 1;
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: left; /* Align text to the left */
+}
+
+/* Centered content */
+.contactContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.contactSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin: 2rem auto 0;
+    width: 100%;
+}
+
+
+/* Left Column - Contact Information */
+.infoColumn {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 50px; 
-    padding-top: 70px;
-    
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left; /* Align text to the left */
 }
 
-.contactItem {
-    text-align: center;
-    margin: 10px;
+/* Right Column - Forms */
+.formColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.contactIcon {
-    font-size: 2rem;
-    color: #0073e6;
-    margin-bottom: 10px;
+.sectionTitle {
+    font-family: 'Cinzel', 'serif';
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #04384B;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.contactItem p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #333;
-    font-family:'Fauna One', serif;
-}
-
-.contactItem a {
-    color: #0073e6;
+.sectionText {
+    font-family: 'Fauna One', serif;
+    line-height: 1.6;
+    color: #666666;
     text-decoration: none;
-    font-family:'Fauna One', serif;
+    color: #b89d7e; /* Accent color */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.contactItem a:hover {
-    text-decoration: underline;
+.sectionText a {
+    font-family: 'Fauna One', serif;
+    text-decoration: none;
+    color: #b89d7e; /* Accent color */
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Map Styling */
+.sectionText a:hover {
+    color: #a58c6f; /* Darker shade on hover */
+}
+
+.icon {
+    width: 30px;  /* Adjust as needed */
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Divider lines */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+/* Form Styles */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px; /* Prevent form from stretching too wide */
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formInput,
+.formTextarea {
+    font-family: 'Fauna One', serif;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formTextarea {
+    resize: vertical;
+}
+
+/* Textarea Focus Effect */
+.formTextarea:focus {
+    background-color: #E7C9AF; /* Soft beige highlight */
+    color: #04384B; /* Elegant deep navy text */
+    border: 1px solid #b89d7e; /* Slightly darker border for definition */
+    outline: none; /* Remove default browser outline */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Optional: Input Fields Focus for consistency */
+.formInput:focus {
+    border: 1px solid #b89d7e; /* Match the textarea focus border */
+    outline: none;
+}
+
+.submitButton {
+    font-family: 'Cinzel', 'serif';
+    background-color: #E7C9AF;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #b89d7e;
+}
+
+/* Map container */
 .mapContainer {
-    margin-top: 30px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 2rem;
 }
 
-.map {
+/* Elegant Extra Info Section */
+.extraInfo {
+    background-color: #F9F5F0; /* Soft, off-white for sophistication */
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    color: #04384B; /* Elegant deep navy */
+    font-family: 'Fauna One', serif;
+    margin-top: 6rem;
+    font-weight: 500;
+    border: 1px solid #E7C9AF; /* Subtle warm beige border */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
 }
 
-.contactImageIcon {
-    width: 30px;  
-    height: 30px;
-    margin-bottom: 10px;
+.extraInfo p {
+    font-weight: bold;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Adjust the banner height for smaller screens */
+    .imageBanner {
+        height: 30vh; /* Slightly shorter banner */
+    }
+
+    /* Adjust the main title for smaller screens */
+    .mainTitle {
+        font-size: 2rem; /* Smaller font size */
+        left: 5%; /* Move closer to the edge */
+        text-align: center; /* Center-align text */
+        width: 90%; /* Prevent text from touching the edges */
+    }
+
+    /* Stack all sections vertically */
+    .contactSections {
+        display: flex;
+        flex-direction: column; /* Single column layout */
+        gap: 2rem; /* Reduce gap between sections */
+    }
+
+    /* Full width for all sections */
+    .infoColumn,
+    .formColumn {
+        width: 100%; /* Full width for both columns */
+        max-width: 100%; /* Remove max-width restriction */
+    }
+
+    /* Center-align text in the info column */
+    .infoColumn {
+        text-align: center;
+    }
+
+    /* Adjust the map container for smaller screens */
+    .mapContainer {
+        max-width: 100%; /* Full width */
+        margin-top: 1rem; /* Reduce top margin */
+    }
+
+    /* Reduce padding in the contact content */
+    .contactContent {
+        padding: 1rem; /* Less padding for smaller screens */
+    }
+
+    /* Adjust the form column layout */
+    .formColumn {
+        order: 2; /* Move the form below the map */
+        margin-top: 2rem; /* Add space above the form */
+    }
+
+    /* Adjust the extra info section */
+    .extraInfo {
+        order: 3; /* Move the extra info below the form */
+        margin-top: 2rem; /* Add space above the extra info */
+        padding: 1.5rem; /* Adjust padding */
+        font-size: 1rem; /* Smaller font size */
+        width: 90%; /* Slightly narrower for better readability */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Adjust form input and textarea for smaller screens */
+    .formInput,
+    .formTextarea {
+        padding: 0.8rem; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Adjust the submit button */
+    .submitButton {
+        padding: 0.8rem 1.5rem; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Center-align icons and text in contact sections */
+    .contactSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust the divider for smaller screens */
+    .divider {
+        margin: 1rem 0; /* Reduce margin */
+    }
+}
+
 

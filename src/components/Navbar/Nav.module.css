@@ -51,20 +51,71 @@ nav ul li a:hover::after {
 }
 
 #bars {
-    height: 45px;
-    width: 45px;
-    border: 1px solid rgba(13,13,13,0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 24px rgba(13,13,13,0.1);
+    color: #2596BE; /* New color */
+    font-size: 24px; /* Adjust size */
     cursor: pointer;
-    transition: .6s;
+    transition: transform 0.3s ease;
     display: none;
 }
 
 #bars:hover {
     box-shadow: 0 0 14px rgba(13,13,13,0.1);
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 5%;
+        position: relative;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .navMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #EEE0D7;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    .navMenu.activeNav {
+        display: flex;
+    }
+
+    .navMenu li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .navMenu li a {
+        font-size: 18px;
+    }
+
+    #bars {
+        display: block;
+    }
+
+    #bars:hover {
+        transform: scale(1.1);
+    }
+
+    /* Adjust hover effect for mobile */
+    .navMenu li a::after {
+        display: none;
+    }
+
+    .navMenu li a:hover {
+        color: #1d7a9c;
+    }
+}
+
 

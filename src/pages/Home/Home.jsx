@@ -84,25 +84,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className={styles.mapSection}>
-  
-  <div className={styles.mapContainer}>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12065.45261530593!2d25.354523!3d37.082062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14980ba950ef4381%3A0xfa47fa5a80eba116!2sVilla%20Aurora!5e0!3m2!1sen!2sus!4v1682420710543!5m2!1sen!2sus"
-      width="400"  
-      height="300"  
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-    ></iframe>
-  </div>
-
-  
-  <div className={styles.addressContainer}>
-    <h3>Agios Prokopios - Stelida</h3>
-    <p>Naxos Island, 84300, GR</p>
-  </div>
-</section> */}
 
         <Footer />
 
