@@ -135,6 +135,26 @@ body, html {
     margin-bottom: 0.5rem;
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up by 10px */
+    }
+}
+
+.icon {
+    width: 30px;  /* Adjust as needed */
+    height: auto;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.icon:hover {
+    animation: bounce 0.5s infinite; /* Apply the bounce animation */
+}
+
 /* Divider lines */
 .divider {
     border: 0;
