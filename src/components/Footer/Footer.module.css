@@ -25,7 +25,7 @@
 
 .mainContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
@@ -94,6 +94,16 @@
   color: #04384B;
 }
 
+.creatorLink {
+  color: #04384B; /* Match the existing color scheme */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Match the bold style */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.creatorLink:hover {
+  color: #2596BE; /* Change color on hover to match the social icons */
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
