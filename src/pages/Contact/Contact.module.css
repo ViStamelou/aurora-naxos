@@ -143,6 +143,7 @@ body, html {
     margin: 1.5rem 0;
 }
 
+
 /* Form Styles */
 .contactForm {
     display: flex;
@@ -232,6 +233,11 @@ body, html {
     font-weight: bold;
 }
 
+.separator {
+    display: none; /* Hide by default */
+}
+
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     /* Adjust the banner height for smaller screens */
@@ -251,7 +257,7 @@ body, html {
     .contactSections {
         display: flex;
         flex-direction: column; /* Single column layout */
-        gap: 2rem; /* Reduce gap between sections */
+        gap: 1rem; /* Reduce gap between sections */
     }
 
     /* Full width for all sections */
@@ -270,6 +276,12 @@ body, html {
     .mapContainer {
         max-width: 100%; /* Full width */
         margin-top: 1rem; /* Reduce top margin */
+    }
+
+    .separator {
+        display: block; /* Make it visible */
+        margin-left: auto; /* Centers the SVG horizontally */
+        margin-right: auto; /* Centers the SVG horizontally */
     }
 
     /* Reduce padding in the contact content */
@@ -320,5 +332,6 @@ body, html {
         margin: 1rem 0; /* Reduce margin */
     }
 }
+
 
 
