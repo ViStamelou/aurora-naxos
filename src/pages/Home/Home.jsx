@@ -44,7 +44,7 @@ const Home = () => {
               <div className={styles.carouselText}>
                 <h2>Aurora Villas Naxos</h2>
                 <p>Experience luxury and comfort</p>
-                <a href="/Contact">
+                <a href="https://auroravillas.reserve-online.net/ ">
                   <button className={styles.carouselButton}>Book Now</button>
                 </a>
               </div>

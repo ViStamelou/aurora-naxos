@@ -109,6 +109,8 @@ function Contact() {
                                         className={styles.formInput}
                                         name="email" 
                                         required
+                                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+" // Regex for basic email validation
+                                        title="Please enter a valid email address (e.g., example@domain.com)." // Error message
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
