@@ -1,6 +1,7 @@
 import Nav from "../../components/Navbar/Nav";
 import Footer from "../../components/Footer/Footer";
 import styles from "./Contact.module.css";
+import emailjs from 'emailjs-com';
 
 function Contact() {
     return (
@@ -74,12 +75,30 @@ function Contact() {
                     <div className={styles.formColumn}>
                         <section className={styles.formSection}>
                             <h2 className={styles.sectionTitle}>Send a message</h2>
-                            <form className={styles.contactForm}>
+                            <form className={styles.contactForm} onSubmit={(e) => {
+                                e.preventDefault(); // Stop the form from refreshing the page
+
+                                // Send the email using EmailJS
+                                emailjs.sendForm(
+                                    'service_jbtjdt9', // Replace with your Service ID
+                                    'template_m34z5l3', // Replace with your Template ID
+                                    e.target, // The form element
+                                    'qiLVaqrrIUIJJ1Nq7' // Replace with your User ID
+                                )
+                                .then((result) => {
+                                    alert('Message sent! We’ll get back to you soon.'); // Show a success message
+                                }, (error) => {
+                                    alert('Oops! Something went wrong. Please try again.'); // Show an error message
+                                });
+
+                                e.target.reset(); // Clear the form after sending
+                            }}>
                                 <div className={styles.formGroup}>
                                     <input 
                                         type="text" 
                                         placeholder="Name" 
                                         className={styles.formInput}
+                                        name="name" // Add this
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
@@ -87,6 +106,7 @@ function Contact() {
                                         type="email"
                                         placeholder="Enter email address"
                                         className={styles.formInput}
+                                        name="email" // Add this
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
@@ -94,6 +114,7 @@ function Contact() {
                                         placeholder="Enter your message"
                                         className={styles.formTextarea}
                                         rows="5"
+                                        name="message" // Add this
                                     />
                                 </div>
                                 <button type="submit" className={styles.submitButton}>
