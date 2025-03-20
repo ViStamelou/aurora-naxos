@@ -98,7 +98,8 @@ function Contact() {
                                         type="text" 
                                         placeholder="Name" 
                                         className={styles.formInput}
-                                        name="name" // Add this
+                                        name="name"
+                                        required
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
@@ -106,7 +107,8 @@ function Contact() {
                                         type="email"
                                         placeholder="Enter email address"
                                         className={styles.formInput}
-                                        name="email" // Add this
+                                        name="email" 
+                                        required
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
@@ -114,7 +116,8 @@ function Contact() {
                                         placeholder="Enter your message"
                                         className={styles.formTextarea}
                                         rows="5"
-                                        name="message" // Add this
+                                        name="message"
+                                        required
                                     />
                                 </div>
                                 <button type="submit" className={styles.submitButton}>
