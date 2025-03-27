@@ -12,20 +12,17 @@ const villaData = {
       ...Array.from({ length: 8 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
       ...Array.from({ length: 26 }, (_, i) => `/assets/Villa_I/image${i + 11}.jpg`),
       ...Array.from({ length: 20 }, (_, i) => `/assets/Villa_II/images${i + 9}.jpg`),
-    ],   
-    amenities: ["Private Pool", "Beach Access", "Free WiFi", "24/7 Security"],
+    ],
   },
   villa1: {
     name: "Villa I",
     description: "Villa I",
     images: Array.from({ length: 36 }, (_, i) => `/assets/Villa_I/image${i + 1}.jpg`),
-    amenities: ["Infinity Pool", "King-sized Bed", "Outdoor Lounge"],
   },
   villa2: {
     name: "Villa II",
     description: "Villa II",
     images: Array.from({ length: 28 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
-    amenities: ["Garden View", "Hot Tub", "Smart TV"],
   },
 };
 
@@ -33,7 +30,20 @@ function Villas() {
   const [selectedVilla, setSelectedVilla] = useState("wholeVilla");
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
-  const { description, images, amenities } = villaData[selectedVilla];
+  const { description, images } = villaData[selectedVilla];
+
+  // Dynamic counts
+  const bedroomCount = {
+    wholeVilla: "8 Bedrooms",
+    villa1: "4 Bedrooms",
+    villa2: "4 Bedrooms",
+  };
+
+  const bathroomCount = {
+    wholeVilla: "5.5 Bathrooms",
+    villa1: "3.5 Bathrooms",
+    villa2: "2 Bathrooms",
+  };
 
   const openImageModal = (index) => setSelectedImageIndex(index);
   const closeModal = () => setSelectedImageIndex(null);
@@ -59,6 +69,34 @@ function Villas() {
       "From the fully equipped and functional kitchen to the cozy living area and sun loungers by the jacuzzi, you will definitely want to spend as much in-house time as possible with many plants, herbs, and trees that will make your stay a pleasure.",
     ],
   };
+
+  const amenities = [
+    { image: "/assets/amenities/squaremeters.png", text: "- m2" },
+    { image: "/assets/amenities/parking.png", text: "Free Parking" },
+    { image: "/assets/amenities/wifi.png", text: "Free WiFi" },
+    { image: "/assets/amenities/ac.png", text: "A/C" },
+    { image: "/assets/amenities/housekeeping.png", text: "Housekeeping" },
+    { image: "/assets/amenities/smoke.png", text: "No Smoking" },
+    { image: "/assets/amenities/safe-box.png", text: "Safety-Deposit Box"},
+    { image: "/assets/amenities/bed.png", text: "Bedrooms" }, // Dynamic text
+    { image: "/assets/amenities/bathroom.png", text: "Bathrooms" }, // Dynamic text
+    { image: "/assets/amenities/shower.png", text: "Shower" },
+    { image: "/assets/amenities/shower-gel.png", text: "Shower Amenities" },
+    { image: "/assets/amenities/towel.png", text: "Towels" },
+    { image: "/assets/amenities/hair-dryer.png", text: "Hair Dryer" },
+    { image: "/assets/amenities/iron.png", text: "Iron Facilities" },
+    { image: "/assets/amenities/utencils.png", text: "Kitchen Utencils" },
+    { image: "/assets/amenities/kettle.png", text: "Kettle" },
+    { image: "/assets/amenities/fridge.png", text: "Fridge" },
+    { image: "/assets/amenities/coffee_maker.png", text: "Coffee Machine" },
+    { image: "/assets/amenities/oven.png", text: "Oven" },
+    { image: "/assets/amenities/tv.png", text: "TV" },
+    { image: "/assets/amenities/chair.png", text: "Seating Area" },
+    { image: "/assets/amenities/wardrobe.png", text: "Wardrobes" },
+    { image: "/assets/amenities/pool.png", text: "Private Pool" },
+    { image: "/assets/amenities/hottub.png", text: "Outdoor Jacuzzi" },
+    { image: "/assets/amenities/sunbed.png", text: "Sunbed" },    
+  ];
 
   return (
     <div className={styles.container}>
@@ -118,11 +156,11 @@ function Villas() {
               <p>
                 No free cancellation is allowed for this rate, special conditions apply.
                 <br />
-                If you cancel, modify the booking, or don’t show up, the fee will be the
+                If you cancel, modify the booking, or don't show up, the fee will be the
                 total price of the reservation.
                 <br />
                 However, you can reschedule your stay one time until the arrival date for
-                the same or a higher price. You’ll only be charged if there’s a price
+                the same or a higher price. You'll only be charged if there's a price
                 difference between your new and old dates.
               </p>
             </div>
@@ -162,16 +200,40 @@ function Villas() {
               />
             ))}
           </div>
-
-          <div className={styles.amenities}>
-            <h2>Amenities</h2>
-            <ul>
-              {amenities.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
         </main>
+      </div>
+
+      {/* Amenities Section */}
+      <div className={styles.amenitiesSection}>
+        <h2 className={styles.amenitiesTitle}>Our Amenities</h2>
+        <div className={styles.amenitiesGrid}>
+          {amenities.map((amenity) => {
+            // Conditional rendering logic
+            if (amenity.text === "Private Pool" && selectedVilla === "villa2") return null;
+            if (amenity.text === "Outdoor Jacuzzi" && selectedVilla === "villa1") return null;
+
+            // Dynamic text handling
+            let displayText = amenity.text;
+            if (amenity.text === "Bedrooms") {
+              displayText = bedroomCount[selectedVilla];
+            }
+            if (amenity.text === "Bathrooms") {
+              displayText = bathroomCount[selectedVilla];
+            }
+
+            return (
+              <div key={amenity.image} className={styles.amenityItem}>
+                <img 
+                  src={amenity.image} 
+                  alt={displayText} 
+                  className={styles.amenityImage}
+                  loading="lazy"
+                />
+                <p className={styles.amenityText}>{displayText}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {selectedImageIndex !== null && (
@@ -199,6 +261,7 @@ function Villas() {
 }
 
 export default Villas;
+
 
 
 
