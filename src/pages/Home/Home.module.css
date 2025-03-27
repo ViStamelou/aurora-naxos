@@ -230,3 +230,143 @@ h3 {
 .addressContainer p {
   font-size: 16px;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homeContainer {
+    height: auto;
+  }
+
+  /* Carousel Adjustments */
+  .carousel {
+    height: 60vh;
+  }
+
+  .carouselText h2 {
+    font-size: 1.8rem;
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+
+  .carouselText p {
+    font-size: 1rem;
+  }
+
+  .carouselButton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  /* Info Section Stacking */
+  .infoSection {
+    flex-direction: column;
+    padding: 2rem 5%;
+  }
+
+  .infoSection::before {
+    display: none; /* Remove background image on mobile */
+  }
+
+  /* Text Content Adjustments */
+  .textContent {
+    width: 100%;
+  }
+
+  .textContent p {
+    font-size: 0.9rem;
+  }
+
+  /* Navigation Buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 10px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 50vh;
+  }
+
+  .carouselText h2 {
+    font-size: 1.5rem;
+  }
+
+  .carouselText p {
+    font-size: 0.9rem;
+  }
+
+  .infoSection {
+    padding: 1.5rem 5%;
+  }
+
+  h3 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  /* Map Section Adjustments */
+  .mapSection {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .mapContainer {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablet Landscape Optimization */
+@media (max-width: 1024px) and (orientation: landscape) {
+  .carousel {
+    height: 80vh;
+  }
+  
+  .infoSection {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 180px);
+    padding: 0 1rem;
+  }
+
+  .imageGrid .gridImage:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .imageGrid .gridImage:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .imageGrid .gridImage:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 250px);
+  }
+
+  .imageGrid .gridImage:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .imageGrid .gridImage:nth-child(2),
+  .imageGrid .gridImage:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: auto;
+  }
+}

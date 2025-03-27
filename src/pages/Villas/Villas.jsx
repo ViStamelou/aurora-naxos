@@ -8,21 +8,23 @@ const villaData = {
     name: "The Entire Villa",
     description: "The Entire Villa",
     images: [
-      ...Array.from({ length: 35 }, (_, i) => `/assets/Villa_I/image${i + 1}.jpg`),
-      ...Array.from({ length: 29 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
-    ],
+      ...Array.from({ length: 10 }, (_, i) => `/assets/Villa_I/image${i + 1}.jpg`),
+      ...Array.from({ length: 8 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
+      ...Array.from({ length: 26 }, (_, i) => `/assets/Villa_I/image${i + 11}.jpg`),
+      ...Array.from({ length: 20 }, (_, i) => `/assets/Villa_II/images${i + 9}.jpg`),
+    ],   
     amenities: ["Private Pool", "Beach Access", "Free WiFi", "24/7 Security"],
   },
   villa1: {
     name: "Villa I",
     description: "Villa I",
-    images: Array.from({ length: 35 }, (_, i) => `/assets/Villa_I/image${i + 1}.jpg`),
+    images: Array.from({ length: 36 }, (_, i) => `/assets/Villa_I/image${i + 1}.jpg`),
     amenities: ["Infinity Pool", "King-sized Bed", "Outdoor Lounge"],
   },
   villa2: {
     name: "Villa II",
     description: "Villa II",
-    images: Array.from({ length: 29 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
+    images: Array.from({ length: 28 }, (_, i) => `/assets/Villa_II/images${i + 1}.jpg`),
     amenities: ["Garden View", "Hot Tub", "Smart TV"],
   },
 };
@@ -87,8 +89,8 @@ function Villas() {
               <h4>Maximum Villa Capacity</h4>
               <p>
                 {selectedVilla === "wholeVilla"
-                  ? "Up to 16 guests are allowed"
-                  : "Up to 8 guests are allowed"}
+                  ? "Up to 16 guests are allowed."
+                  : "Up to 8 guests are allowed."}
               </p>
             </div>
             <div className={styles.policy}>
