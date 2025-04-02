@@ -118,4 +118,116 @@ nav ul li a:hover::after {
     }
 }
 
-
+/* ---------- Dropdown Container & Toggle ---------- */
+nav ul li.dropdown {
+    position: relative;
+  }
+  
+  /* Style for the clickable element (Discover Naxos) */
+  nav ul li.dropdown .dropdownToggle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2596BE;
+    cursor: pointer;
+    padding-bottom: 5px;
+  }
+  
+  /* ---------- Dropdown Menu Styling ---------- */
+  nav ul li.dropdown ul.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #EEE0D7;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+    z-index: 1000;
+    
+    /* Initial hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+    /* Optional subtle border and shadow similar to the reference */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dropdown menu items */
+  nav ul li.dropdown ul.dropdownMenu li {
+    display: block;
+    margin: 0;
+    text-align: left;
+    padding: 8px 15px; /* Increases click area */
+  }
+  
+  nav ul li.dropdown ul.dropdownMenu li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2596BE;
+    text-decoration: none;
+  }
+  
+  /* Optional hover effect for submenu links */
+  nav ul li.dropdown ul.dropdownMenu li a:hover {
+    /* This maintains your color scheme; feel free to adjust if needed */
+    background-color: rgba(37, 150, 190, 0.1);
+  }
+  
+  /* ---------- Desktop: Show Dropdown on Hover ---------- */
+  @media screen and (min-width: 769px) {
+    nav ul li.dropdown:hover ul.dropdownMenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ---------- Mobile Responsive Adjustments ---------- */
+  @media screen and (max-width: 768px) {
+    /* For mobile, let the dropdown menu be positioned relative so it flows within the nav menu */
+    nav ul li.dropdown ul.dropdownMenu {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      border: none;
+      box-shadow: none;
+      min-width: auto;
+      width: 100%;
+      padding: 0; /* Remove extra padding if needed */
+    }
+    
+    /* Ensure the dropdown container and toggle fill the width of the mobile nav */
+    nav ul li.dropdown {
+      width: 100%;
+    }
+    nav ul li.dropdown .dropdownToggle {
+      display: block;
+      width: 100%;
+      padding: 8px 15px;
+      position: relative;
+    }
+    
+    /* Add an arrow next to Discover Naxos */
+    nav ul li.dropdown .dropdownToggle::after {
+      content: "\25BC"; /* Unicode for a downward arrow */
+      position: absolute;
+      right: 120px; /* Align with the right padding */
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #2596BE;
+    }
+    
+    /* Style individual dropdown items for mobile */
+    nav ul li.dropdown ul.dropdownMenu li {
+      padding: 10px 15px;
+    }
+  }
+  
+  

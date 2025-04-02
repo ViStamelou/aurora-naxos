@@ -1,0 +1,105 @@
+/* Container for the activities section */
+.travelAgencyServices {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    /* #f0f5f8; */
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Wrapper for all service cards */
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four cards per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Individual service card */
+  .serviceCard {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container for the icon */
+  .iconContainer {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Icon styling */
+  .serviceIcon {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Service title styling */
+  .serviceTitle {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  /* Service description styling */
+  .serviceDescription {
+    font-family: 'Fauna', serif; 
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    transition: max-height 0.3s ease;
+  }
+  
+  /* Clamp text to 3 lines */
+  .clampText {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Button styling */
+  .serviceButton {
+    background-color: #ff7e31;
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .serviceButton:hover {
+    background-color: #f96b1f;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cardWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  

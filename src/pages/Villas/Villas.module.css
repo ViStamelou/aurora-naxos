@@ -124,8 +124,9 @@
 /* Amenities Section Styles */
 .amenitiesSection {
   padding: 60px 20px;
-  background-color: #f8f9fa;
+  background-color: #fff;
   text-align: center;
+  /* #f8f9fa; */
 }
 
 .amenitiesTitle {
@@ -466,5 +467,36 @@
   /* Optionally add some space above the main content */
   .mainContent {
     padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flexContainer {
+    display: grid;
+    grid-template-areas:
+      "radio"
+      "sidebar"
+      "gallery";
+    grid-gap: 20px;
+  }
+  /* Flatten mainContent so its children can be positioned as grid items */
+  .mainContent {
+    display: contents;
+  }
+  .radioSection {
+    grid-area: radio;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    /* Optional: adjust margins if needed for a cleaner mobile layout */
+    margin: 10px;
+  }
+  .gallery {
+    grid-area: gallery;
+  }
+  /* Hide the description text if you want the order to be exactly:
+     radio section, then sidebar, then gallery */
+  .description {
+    display: none;
   }
 }
