@@ -217,7 +217,7 @@ nav ul li.dropdown {
     nav ul li.dropdown .dropdownToggle::after {
       content: "\25BC"; /* Unicode for a downward arrow */
       position: absolute;
-      right: 120px; /* Align with the right padding */
+      right: 10px; /* Align with the right padding */
       top: 50%;
       transform: translateY(-50%);
       font-size: 16px;
