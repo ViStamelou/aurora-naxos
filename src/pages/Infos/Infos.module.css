@@ -62,7 +62,7 @@
 .link {
     font-family: 'Fauna', serif; /* Different font */
     font-size: 1.1rem;
-    color: #2d3748;
+    color: #2596BE;
     text-decoration: none;
     transition: all 0.3s ease;
     display: block;
@@ -70,7 +70,7 @@
 }
 
 .link:hover {
-    color: #2b6cb0;
+    color: #04384B;
     text-decoration: underline;
     font-weight: 700; /* Bolder on hover */
     transform: translateX(5px); /* Optional subtle movement */
