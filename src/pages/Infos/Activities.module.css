@@ -11,7 +11,7 @@
   .title {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #333;
+    color: #04384B;
   }
   
   /* Wrapper for all service cards */
@@ -25,7 +25,7 @@
   
   /* Individual service card */
   .serviceCard {
-    background-color: #f8f9fa;
+    background-color: #EEE0D7;
     border-radius: 8px;
     padding: 20px 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@
   .serviceTitle {
     font-size: 0.8rem;
     margin-bottom: 10px;
-    color: #444;
+    color: #04384B;
   }
   
   /* Service description styling */
@@ -74,7 +74,7 @@
   
   /* Button styling */
   .serviceButton {
-    background-color: #ff7e31;
+    background-color: #2596BE;
     color: #ffffff;
     font-weight: bolder;
     border: none;
@@ -85,7 +85,7 @@
   }
   
   .serviceButton:hover {
-    background-color: #f96b1f;
+    background-color: #E7C9AF;
   }
   
   /* Responsive adjustments */

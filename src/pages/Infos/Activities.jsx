@@ -66,7 +66,7 @@ function Activities() {
     {
       icon: alikoBeachImg,
       altText: "Aliko beach icon",
-      title: "Aliko beach (Hawaii & Kedros)",
+      title: "Aliko Beach",
       description:
         "Aliko is a wonderful peninsula with some very beautiful beaches, located on the south western side of Naxos, Cyclades. The most famous beach is called Hawaii and the nudism-friendly beach of Kedros. You can approach Kedros on foot from Hawaii since the beaches are adjoining. Above the beaches of Aliko, there is a unique cedar forest with marvellous sand dunes. This forest has been declared a protected natural area and creates an exotic landscape.",
     },
