@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .flipbookContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #fff;
+  }
+  
+  .coverPage {
+    background: #2596BE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .coverPageImg{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .imagePage {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .imagePage img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .sectionText{
+    font-family: 'Fauna', serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    display:grid ;
+  }
+
+  .textPage {
+    background: #f0f0f0;
+    padding: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .linksContainer {
+    padding: 2rem;
+  }
+  
+  .linksContainer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .linksContainer li {
+    margin: 1rem 0;
+  }
+  
+  .linksContainer a {
+    color: #2596BE;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .linksContainer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .sectionText{
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .linksContainer ul {
+      columns: 2;
+      column-gap: 1rem;
+    }
+  
+    .linksContainer li {
+      font-size: 0.7rem;
+      break-inside: avoid;
+    }
+  
+    .linksContainer a {
+      font-size: 0.7rem;
+    }
+  }

@@ -107,6 +107,13 @@
   background-color: white;
 }
 
+:root {
+  --swiper-theme-color: #2596BE;
+  --swiper-navigation-color: #2596BE;
+  --swiper-pagination-color: #2596BE;
+}
+
+
 /* Section Below Carousel */
 .infoSection {
   display: flex;

@@ -62,10 +62,23 @@ function Footer() {
           </div>
         </div>
 
+        {/*Members Section */}
+        <div className={footerCSS.memberSection}>
+          <p className={footerCSS.memberText}>Members of</p>
+          <a href="https://www.optimalodgings.com/en/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="/assets/optima_lodgings.png" 
+              alt="Partner Logo" 
+              className={footerCSS.memberLogo} 
+            />
+          </a>
+        </div>
+
+
         {/* Copyright */}
         <p className={footerCSS.copyright}>
           &copy; {currentYear} Aurora Villas Naxos. All Rights Reserved. <br />
-          Created by{" "}
+          Designed & Created by{" "}
           <a
             href="https://vistamelou.github.io/myportfolio/" 
             target="_blank"

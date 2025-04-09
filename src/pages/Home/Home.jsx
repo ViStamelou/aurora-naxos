@@ -62,8 +62,6 @@ const Home = () => {
           <p>
           Discover Aurora Villas, nestled in the tranquil haven of Stelida, Naxos. These two exquisite villas sprawl across a lush garden spanning 2000 square meters, 
           offering a sanctuary of peace and privacy.</p>
-          <p>Each villa boasts 4 thoughtfully designed bedrooms, accommodating up to 8 guests. For those seeking a grander experience, 
-          the option to reserve both villas together unveils a lavish retreat with a total of 8 bedrooms, accommodating up to 16 guests. </p>
           <p>Aurora Naxos stands as one of the 
           largest and most opulent villas on the island.These enchanting villas exude the authentic charm of Cycladic architecture, creating an idyllic escape for families 
           and friends eager to explore the captivating beauty of Naxos island.
@@ -73,6 +71,10 @@ const Home = () => {
           The Villas share one building, but can also be rented as a whole.
           Aurora Villas make the perfect environment for a family or friends vacation in Naxos, which is filled with authentic Cycladic character and raw purity of its nature.
           </p>
+          <p>Each villa boasts 4 thoughtfully designed bedrooms, accommodating up to 8 guests. For those seeking a grander experience, 
+          the option to reserve both villas together unveils a lavish retreat with a total of 8 bedrooms, accommodating up to 16 guests. </p>
+          <p> Aurora Villas are located only 4km from Naxos Port and 2km from Naxos Airport. From the Villa it’s just a 10-minute walking to the award winning Agios Prokopis Beach and a short drive to everywhere else you want to go.
+          The Villas are ideal for those who want to enjoy a quiet and peaceful space close to the beach and Naxos town. </p>
           <h3>Book your unforgettable retreat at Aurora Naxos Villas now and experience the epitome of island luxury.</h3>
         </div>
 
