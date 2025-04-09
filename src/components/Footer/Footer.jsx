@@ -34,7 +34,9 @@ function Footer() {
             <div className={footerCSS.footerColumn}>
               <h3 className={footerCSS.footerTitle}>RESERVATION</h3>
               <p className={footerCSS.footerEmail}>Email: <a href="mailto:auroranaxos@gmail.com" className={footerCSS.footerLink}>auroranaxos@gmail.com</a></p>
-              <p className={footerCSS.footerTel}>Tel: <a href="tel:+30" className={footerCSS.footerLink}>+30</a></p>
+              <p className={footerCSS.footerTel}>Tel: <a href="tel:+306938391970" className={footerCSS.footerLink}>+30 6938391970</a></p>
+              <p className={footerCSS.footerTel}>Tel2: <a href="tel:+306977783594" className={footerCSS.footerLink}>+30 6977783594</a></p>
+              
             </div>
 
             {/* Follow Us */}

@@ -31,7 +31,10 @@ function Contact() {
                         <section className={styles.contactSection}>
                             <img src="/assets/icons/phone-icon.png" alt="Phone" className={styles.icon} />
                             <p className={styles.sectionText}>
-                                <a href="tel:+30XXXXXXXXXX">Tel +30 XXXXXXXX</a>
+                                <a href="tel:+306938391970">Tel: +30 6938391970</a>
+                            </p>
+                            <p className={styles.sectionText}>
+                                <a href="tel:+306977783594">Tel2: +30 6977783594</a>
                             </p>
                         </section>
 
