@@ -13,7 +13,7 @@ function About() {
             <h3>AURORA NAXOS</h3>
             <h1>Meet Your Hosts</h1>
             <p>
-             We are a passionate couple who love to travel and explore new cultures. With a shared love for hospitality, we’ve created Aurora Villas to offer guests the ultimate Naxos experience. Dedicated to ensuring every stay is memorable, we go above and beyond to provide warm, personalized service and make you feel right at home.
+             We are a passionate couple who loves to travel and explore new cultures. With a shared devotion for hospitality, we’ve created Aurora Villas to offer guests the ultimate Naxos experience. Dedicated to ensuring every stay is memorable, we go above and beyond to provide warm, personalized service and make you feel right at home.
             </p>
             <p className={styles.aboutSignature}>Dimitris & Yiota Sergis</p>
             <p className={styles.aboutOwner}>DIMITRIS & YIOTA SERGIS - THE OWNERS</p>
