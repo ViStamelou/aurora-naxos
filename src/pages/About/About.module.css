@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+.aboutSection {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+
+.aboutText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* Center all text in the column */
+    text-align: center;
+}
+
+/* Reset alignment for other elements */
+.aboutText h3,
+.aboutText p {
+    text-align: left;
+}
+
+.aboutImage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutImage img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.aboutText h3 {
+    font-size: 1.2rem;
+    color: #888;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.aboutText h1 {
+    font-size: 2.5rem;
+    font-family: 'Fauna One', serif;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    /* Center alignment for heading */
+    text-align: center;
+    /* Adjust spacing */
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.aboutText p {
+    font-family: 'Fauna One', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.aboutText p.aboutSignature {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    color: #222;
+}
+
+.aboutOwner {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .aboutContainer {
+        flex-direction: column;
+    }
+    
+    .aboutImage {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .aboutText h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Reset alignment for mobile if needed */
+    .aboutText h3,
+    .aboutText p {
+        text-align: center; /* Optional: Center all text on mobile */
+    }
+}
+
