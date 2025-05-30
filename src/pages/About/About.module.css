@@ -45,7 +45,7 @@
 
 .aboutText h3 {
     font-size: 1.2rem;
-    color: #888;
+    color: #2596BE;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -76,7 +76,8 @@
     font-family: 'Homemade Apple', cursive;
     font-size: 1.8rem;
     margin-top: 1rem;
-    color: #222;
+    color: #04384B;
+    text-align: center;
 }
 
 .aboutOwner {

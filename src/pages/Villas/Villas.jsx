@@ -221,6 +221,12 @@ function Villas() {
               displayText = bathroomCount[selectedVilla];
             }
 
+            if (amenity.text === "- m2") {
+              if (selectedVilla === "wholeVilla") displayText = "260 m2";
+              if (selectedVilla === "villa1") displayText = "140 m2";
+              if (selectedVilla === "villa2") displayText = "120 m2";
+            }
+
             return (
               <div key={amenity.image} className={styles.amenityItem}>
                 <img 
