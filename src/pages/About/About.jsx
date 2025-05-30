@@ -2,6 +2,10 @@ import Nav from "../../components/Navbar/Nav";
 import Footer from "../../components/Footer/Footer";
 import styles from "./About.module.css";
 
+import Icon1 from "/assets/about/fish.png";
+import Icon2 from "/assets/about/fish.png";
+import Icon3 from "/assets/about/fish.png";
+
 function About() {
   return (
     <>
@@ -27,6 +31,28 @@ function About() {
               alt="Dimitris & Yiota, owners of Aurora Naxos" 
             />
           </div>
+        </div>
+
+          {/* Add this new icons section */}
+        <div className={styles.decorativeIcons}>
+          <img 
+            src={Icon1} 
+            alt="" 
+            className={styles.decorativeIcon} 
+            aria-hidden="true"
+          />
+          <img 
+            src={Icon2} 
+            alt="" 
+            className={styles.decorativeIcon} 
+            aria-hidden="true"
+          />
+          <img 
+            src={Icon3} 
+            alt="" 
+            className={styles.decorativeIcon} 
+            aria-hidden="true"
+          />
         </div>
       </section>
       <Footer />
