@@ -30,6 +30,37 @@ function Beaches() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className={styles.mapSection}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>Interactive Map of Naxos</h2>
+          <p className={styles.mapSubtitle}>Explore archeological sites, churches and various attractions</p>
+          
+          <div className={styles.mapContainer}>
+            <iframe 
+              src="https://map.proxi.co/r/6tiJ-YL4k1QXjzbHT9k7" 
+              allow="geolocation; clipboard-write"
+              width="100%" 
+              height="625px" 
+              style={{ border: 'none' }}
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          <div className={styles.mapAttribution}>
+            <span>powered by </span>
+            <a 
+              href="https://www.proxi.co/?utm_source=poweredbyproxi" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Proxi
+            </a>
+          </div>
+        </div>
+      </section>
+
+
       {/* Blue Caves Section */}
       <section className={styles.mountainsSection}>
         <div className={styles.container}>
