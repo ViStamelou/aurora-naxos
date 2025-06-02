@@ -9,6 +9,7 @@ import Infos from './pages/Infos/Infos'
 import Activities from './pages/Infos/Activities'
 import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
+import Restaurants from './pages/Infos/Restaurants'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='About' element={<About/>}></Route>
         <Route path='Villas' element={<Villas/>}></Route>
         <Route path='Discover' element={<Discover/>}></Route>
+        <Route path='Restaurants' element={<Restaurants/>}></Route>
         <Route path='AboutInfo' element={<AboutInfo/>}></Route>
         <Route path='Beaches' element={ <Beaches/>}></Route>
         <Route path='Infos' element={<Infos/>}></Route>
