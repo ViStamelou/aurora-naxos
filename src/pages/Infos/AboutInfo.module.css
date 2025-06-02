@@ -192,4 +192,8 @@
     .overlayImage {
         left: 20%;
       }
+
+    .mapSubtitle {
+      font-size: 1rem;
+    }
   }
