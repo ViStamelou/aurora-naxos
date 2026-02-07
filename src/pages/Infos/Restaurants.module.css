@@ -1,0 +1,159 @@
+/* Restaurants.module.css */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: 2rem;
+  flex: 1;
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #04384B;
+}
+.subtitle {
+  text-align: center;
+  font-style: normal;
+  color: #2596BE;
+  font-weight: bold;
+}
+
+.restaurantsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.restaurantCard {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: #e4d6d0;
+}
+
+.restaurantCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  height: 200px;
+  overflow: hidden;
+}
+
+.restaurantImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.restaurantCard:hover .restaurantImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.restaurantName {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #04384B;
+}
+
+.location {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ... existing styles ... */
+
+.location {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.locationIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: #04384B;
+}
+
+/* ... existing .description and .moreButton styles ... */
+
+.description {
+  color: black;
+  line-height: 1.6;
+  font-family: 'Fauna One', serif; /* Font added here */
+}
+
+.moreButton {
+  background-color: #2596BE;
+  color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.moreButton:hover {
+  background-color: #04384B;
+}
+
+.restaurantsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsiveness (2 cards per row) */
+@media (max-width: 768px) {
+  .restaurantsGrid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 columns */
+    gap: 1rem; /* Reduced gap for small screens */
+  }
+  
+  .main {
+    padding: 1rem; /* Less padding on mobile */
+  }
+  
+  .imageContainer {
+    height: 150px; /* Slightly smaller images */
+  }
+}
+
+/* Optional: Further adjustments for very small screens */
+@media (max-width: 480px) {
+  .restaurantsGrid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .restaurantName {
+    font-size: 1.2rem;
+  }
+}

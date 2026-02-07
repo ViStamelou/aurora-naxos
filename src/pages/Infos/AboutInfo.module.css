@@ -45,6 +45,52 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  /* Map Section */
+.mapSection {
+  padding: 4rem 0;
+}
+
+.mapContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+.mapAttribution {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #666;
+  opacity: 0.7;
+  padding-top: 5px;
+}
+
+.mapAttribution a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.mapAttribution a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #04384B;
+}
+
+.mapSubtitle {
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
   
   /* Blue Caves Section */
   .mountainsSection {
@@ -146,4 +192,8 @@
     .overlayImage {
         left: 20%;
       }
+
+    .mapSubtitle {
+      font-size: 1rem;
+    }
   }

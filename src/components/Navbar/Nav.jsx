@@ -58,6 +58,11 @@ function Nav() {
                 </Link>
               </li>
               <li>
+                <Link to="/Restaurants" onClick={handleMenuItemClick}>
+                    Restaurants & Taverns
+                </Link>
+              </li>
+              <li>
                 <Link to="/Activities" onClick={handleMenuItemClick}>
                   Activities
                 </Link>

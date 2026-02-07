@@ -45,7 +45,7 @@
 
 .aboutText h3 {
     font-size: 1.2rem;
-    color: #888;
+    color: #2596BE;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -76,7 +76,8 @@
     font-family: 'Homemade Apple', cursive;
     font-size: 1.8rem;
     margin-top: 1rem;
-    color: #222;
+    color: #04384B;
+    text-align: center;
 }
 
 .aboutOwner {
@@ -111,3 +112,36 @@
     }
 }
 
+/* Add to the bottom of your existing CSS */
+.decorativeIcons {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.decorativeIcon {
+  width: 80px;
+  height: 80px;
+  opacity: 0.8;
+  filter: grayscale(100%) sepia(100%) hue-rotate(180deg) saturate(300%);
+  transition: transform 0.3s ease;
+}
+
+.decorativeIcon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .decorativeIcons {
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  
+  .decorativeIcon {
+    width: 40px;
+    height: 40px;
+  }
+}
