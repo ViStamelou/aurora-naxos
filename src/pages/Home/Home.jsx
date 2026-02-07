@@ -75,6 +75,19 @@ const Home = () => {
         </div>
       </section>
 
+        {/* Video Section */}
+<section className={styles.videoSection}>
+  <div className={styles.videoWrapper}>
+    <iframe
+      src="https://www.youtube.com/embed/Ni4yAuYCq84"
+      title="Aurora Villas Naxos"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+</section>
+
 
         <Footer />
 
